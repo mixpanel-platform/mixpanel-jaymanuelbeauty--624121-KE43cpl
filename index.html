@@ -171,6 +171,8 @@
 		        exp.$listChosen.append($('<option value="$distinct_id" />').text("$distinct_id"));
 		        exp.$listChosen.append($('<option value="Created" />').text("Created"));
 		        exp.$listChosen.append($('<option value="$first_name" />').text("$first_name"));
+		        exp.$listChosen.append($('<option value="$last_name" />').text("$last_name"));
+		        exp.$listChosen.append($('<option value="Date Of Birth" />').text("Date Of Birth"));
 		        for (prop in d.results) {
 		            exp.$listSelect.append($("<option />").attr("value", prop).text(prop));
 		        }

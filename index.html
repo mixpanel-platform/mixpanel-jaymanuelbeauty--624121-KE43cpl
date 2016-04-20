@@ -134,7 +134,7 @@
 		            exp.headers = [];
 		            exp.$listChosen.find("option").each(function(i, el) {
 		                var prop = el.getAttribute("value");
-		                if (prop !== "$distinct_id" || prop !== "$created") {
+		                if (prop !== "$distinct_id" || prop !== "Created") {
 		                    whereProps.push('(defined (properties["' + prop + '"]))');
 		                }
 		                exp.headers.push(prop);
@@ -169,7 +169,7 @@
 
 		    MP.api.query("api/2.0/engage/properties", {limit: "2000"}).done(function(d) {
 		        exp.$listChosen.append($('<option value="$distinct_id" />').text("$distinct_id"));
-		        exp.$listChosen.append($('<option value="$created" />').text("$created"));
+		        exp.$listChosen.append($('<option value="Created" />').text("Created"));
 		        for (prop in d.results) {
 		            exp.$listSelect.append($("<option />").attr("value", prop).text(prop));
 		        }

@@ -170,6 +170,7 @@
 		    MP.api.query("api/2.0/engage/properties", {limit: "2000"}).done(function(d) {
 		        exp.$listChosen.append($('<option value="$distinct_id" />').text("$distinct_id"));
 		        exp.$listChosen.append($('<option value="Created" />').text("Created"));
+		        exp.$listChosen.append($('<option value="$first_name" />').text("$first_name"));
 		        for (prop in d.results) {
 		            exp.$listSelect.append($("<option />").attr("value", prop).text(prop));
 		        }

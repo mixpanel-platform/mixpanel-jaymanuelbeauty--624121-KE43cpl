@@ -134,7 +134,7 @@
 		            exp.headers = [];
 		            exp.$listChosen.find("option").each(function(i, el) {
 		                var prop = el.getAttribute("value");
-		                if (prop !== "$distinct_id") {
+		                if (prop !== "$distinct_id" || prop !== "$created") {
 		                    whereProps.push('(defined (properties["' + prop + '"]))');
 		                }
 		                exp.headers.push(prop);
